@@ -1,0 +1,228 @@
+footer {
+    padding: 100px 180px 0;
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-dark-gray);
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+footer h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+footer p {
+    width: 500px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    opacity: .7;
+}
+footer .social-media {
+    display: flex;
+    gap: 46px;
+}
+footer .social-media > div {
+    width: 240px;
+    height: 220px;
+    position: relative;
+    background-color: rgba(196, 196, 196, 0.25);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+footer .social-media div > div {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: var(--color-dark-gray);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+footer .social-media > div:nth-of-type(1) svg {
+    width: 40px;
+    height: 40px;
+    margin-top: -8px;
+}
+footer .social-media > div:nth-of-type(2) svg {
+    width: 36px;
+    height: 36px;
+}
+footer .social-media a {
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    direction: ltr;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+footer > span {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 4px;
+    margin-top: 60px;
+    font-size: 12px;
+    font-weight: 200;
+    opacity: .7;
+}
+/* ===============================================================================================| responsive */
+@media screen and (max-width: 1400px) {
+    footer {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    footer h3 {
+        font-size: 34px;
+     }
+    footer p {
+        width: 400px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    footer {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    footer h3 {
+       font-size: 30px;
+    }
+    footer p {
+        width: 300px;
+    }
+    footer .social-media > div {
+        width: 220px;
+        height: 200px;
+    }
+    footer .social-media > div > div {
+        top: -16px;
+        left: 16px;
+        padding: 26px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    footer {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    footer p {
+        width: 300px;
+        font-size: 14px;
+     }
+    footer .social-media > div {
+        width: 190px;
+        height: 170px;
+    }
+    footer .social-media > div > div {
+        top: -12px;
+        left: 12px;
+        padding: 20px;
+        font-size: 14px;
+        gap: 26px;
+    }
+    footer .social-media > div:nth-of-type(1) svg {
+        width: 38px;
+        height: 38px;
+        margin-top: -7px;
+    }
+    footer .social-media > div:nth-of-type(2) svg {
+        width: 34px;
+        height: 34px;
+    }
+}
+@media screen and (max-width: 930px) {
+    footer {
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    footer > div {
+        flex-direction: column;
+        gap: 40px;
+    }
+    footer h3 {
+        font-size: 26px;
+     }
+    footer p {
+        width: auto;
+        font-size: 14px;
+     }
+     footer .social-media {
+        align-self: center;
+        width: fit-content;
+    }
+    footer .social-media > div {
+        width: 200px;
+        height: 180px;
+    }
+    footer .social-media > div > div {
+        top: -14px;
+        left: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    footer .social-media > div {
+        width: 190px;
+        height: 170px;
+    }
+    footer .social-media > div > div {
+        top: -12px;
+        left: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer .social-media > div {
+        width: 170px;
+        height: 150px;
+    }
+    footer .social-media > div > div {
+        gap: 12px;
+    }
+    footer .social-media > div:nth-of-type(1) svg {
+        width: 32px;
+        height: 32px;
+        margin-top: -5px;
+    }
+    footer .social-media > div:nth-of-type(2) svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+@media screen and (max-width: 480px) {
+    footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    footer h3 {
+        font-size: 22px;
+    }
+    footer .social-media {
+        gap: 26px;
+    }
+    footer .social-media > div {
+        width: 130px;
+        height: 120px;
+    }
+    footer .social-media > div > div {
+        top: -8px;
+        left: 8px;
+        font-size: 12px;
+        padding: 12px;
+    }
+}

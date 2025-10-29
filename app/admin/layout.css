@@ -1,0 +1,242 @@
+:root {
+    --admin-color1: #2c2c2c;
+    --admin-color2: #3C4242;
+    --admin-color3: #f5f5f5;
+    --admin-color4: #ffffff;
+    --admin-color5: #d2eb57;
+    --admin-color6: #c7c7c7;
+}
+.admin {
+    background: var(--admin-color3);
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    overflow: hidden;
+}
+.admin * {
+    color: var(--admin-color4);
+}
+/* ----------------------------------------| Toman Price */
+.admin .toman-price {
+    font-size: 14px;
+    --toman-price-color: var(--BW-color1);
+    --toman-price-weight: 700;
+    display: flex;
+    gap: .2em;
+    justify-content: center;
+    align-items: center;
+}
+.admin .toman-price span {
+    font-weight: var(--toman-price-weight);
+    margin-bottom: -.2em;
+    font-family: danaNumber;
+    color: var(--toman-price-color);
+}
+.admin .toman-price svg {
+    display: block;
+    margin-bottom: .1em;
+    height: .8em;
+    width: .68em;
+    fill: var(--toman-price-color);
+}
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=| Selection */
+.admin::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+/* ================================================================| Sidebar */
+.admin .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--admin-color1);
+    padding: 1.9rem 1.25rem;
+    height: 100vh;
+}
+.admin .sidebar > div {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+/* -----------------------------------| Nav */
+.admin .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.9rem;
+    gap: .4rem;
+}
+.admin .sidebar nav > * {
+    display: flex;
+    align-items: center;
+    width: 14rem;
+    height: 2.75rem;
+    border-radius: 0.25rem;
+    padding: 0 .6rem;
+    transition: all .3s;
+}
+.admin .sidebar nav > *.active {
+    background-color: #e1eca71a;
+}
+.admin .sidebar nav h2 {
+    color: var(--admin-color6);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: .3rem;
+    transition: all .3s;
+}
+.admin .sidebar nav a.active h2 {
+    color: var(--admin-color5);
+}
+.admin .sidebar nav svg {
+    stroke: var(--admin-color6);
+    width: 1.8rem;
+    transition: all .3s;
+}
+.admin .sidebar nav a:nth-child(7) svg {
+    fill: var(--admin-color6);
+}
+.admin .sidebar nav a.active svg {
+    stroke: var(--admin-color5);
+}
+.admin .sidebar nav a:nth-child(7).active svg {
+    fill: var(--admin-color5);
+}
+.admin .sidebar nav span {
+    color: var(--admin-color2);
+    height: calc(.8rem + 6px);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--admin-color5);
+    font-family: danaNumber;
+    font-size: 0.6rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ================================================================| Bottom Nav */
+.admin .bottom-nav {
+    position: fixed;
+    width: max-content;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--admin-color1);
+    border-radius: .9rem .9rem 0 0;
+    padding: .4rem .4rem 0;
+    gap: .2rem;
+}
+.admin .bottom-nav a {
+    display: flex;
+    border-radius: .5rem .5rem 0 0;
+    padding: .4rem;
+    transition: all .3s;
+}
+.admin .bottom-nav a.active {
+    background-color: #e1eca71a;
+}
+.admin .bottom-nav svg {
+    height: 2.2rem;
+    aspect-ratio: 1/1;
+    stroke: var(--admin-color6);
+    transition: all .3s;
+}
+.admin .bottom-nav a.active svg {
+    stroke: var(--admin-color5);
+}
+/* ================================================================| Section */
+.admin > section {
+    overflow: auto;
+    z-index: 1;
+    padding: 1.9rem 2.5rem 1.25rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.admin > section h1 {
+    margin-bottom: 1.9rem;
+    word-spacing: .1em;
+}
+.admin > section * {
+    color: var(--admin-color2);
+}
+.admin > section::-webkit-scrollbar {
+    display: none;
+}
+/* ===============================================================================================| responsive */
+@media screen and (max-width: 1200px) {
+    /* =============================| sidebar */
+    .admin .sidebar {
+        padding: 1.5rem 1.25rem;
+    }
+    .admin .sidebar nav {
+        padding-top: 1.5rem;
+    }
+    .admin .sidebar nav > * {
+        width: 10rem;
+    }
+    /* =============================| section */
+    .admin > section {
+        padding: 1.5rem 1.8rem 1.25rem;
+    }
+    .admin > section h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .admin {
+        display: flex;
+        flex-direction: column;
+    }
+    /* =============================| sidebar */
+    .admin .sidebar {
+        display: none;
+    }
+    /* =============================| bottom nav */
+    .admin .bottom-nav {
+        display: flex;
+    }
+    /* =============================| section */
+    .admin > section {
+        padding: 1.4rem 1.6rem 3rem;
+    }
+    .admin > section h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* =============================| section */
+    .admin > section {
+        padding: 1.2rem 1.2rem 3rem;
+    }
+    .admin > section h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* =============================| bottom nav */
+    .admin .bottom-nav {
+        border-radius: .75rem .75rem 0 0;
+        padding: .35rem .35rem 0;
+    }
+    .admin .bottom-nav a {
+        border-radius: .4rem .4rem 0 0;
+        padding: .35rem;
+    }
+    .admin .bottom-nav svg {
+        height: 2.1rem;
+    }
+    /* =============================| section */
+    .admin > section {
+        padding: 1rem 1rem 3rem;
+    }
+    .admin > section h1 {
+        margin-bottom: 1rem;
+    }
+
+}

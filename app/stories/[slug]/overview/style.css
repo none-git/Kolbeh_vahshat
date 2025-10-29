@@ -1,0 +1,351 @@
+#overview {
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+#overview .background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(0);
+    z-index: -1;
+    transition: filter 0.7s;
+}
+/* ======================================================================| main */
+#overview main {
+    display: flex;
+    align-items: center;
+}
+/* ====================================| overview */
+#overview main .overview-section {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+#overview main .overview-section h1 {
+    display: flex;
+    font-size: 96px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px var(--color-black);
+}
+#overview main .overview-section p {
+    text-shadow: 0 0 4px var(--color-black);
+    max-width: 540px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-bottom: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+}
+#overview main .overview-section > div {
+    display: flex;
+    gap: 16px;
+}
+#overview main .overview-section > div > * {
+    border-radius: 6px;
+    padding: 11px 20px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+#overview main .overview-section > div .read {
+    background: var(--color-white);
+    color: var(--color-black);
+    font-weight: 700;
+}
+#overview main .overview-section > div .summary-button {
+    background: rgba(196, 196, 196, 0.25);
+    font-weight: 400;
+}
+#overview main .overview-section > div > svg {
+    align-self: center;
+    align-self: center;
+    width: 48px;
+    aspect-ratio: 1/1;
+    padding: 12px 10px;
+    fill: #00000000;
+    stroke: var(--color-black);
+    stroke-width: 3.5px;
+    background-color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+}
+#overview main .overview-section > div > svg.active {
+    fill: var(--color-red);
+    stroke: var(--color-red);
+}
+/* ====================================| summary */
+#overview main .summary-section {
+    display: none;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#overview main .summary-section h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-shadow: 0 0 2px var(--color-black);
+}
+#overview main .summary-section p {
+    padding: 0 150px 0 170px;
+    max-height: 50vh;
+    direction: ltr;
+    overflow-y: auto;
+    text-align: center;
+    direction: rtl;
+    line-height:36px;
+    color: var(--color4);
+    text-shadow: 0 0 16px var(--color-black);
+    white-space: pre-line;
+}
+#overview main .summary-section p::-webkit-scrollbar {
+    width: 8px;
+}
+#overview main .summary-section p::-webkit-scrollbar-track {
+    background-color: var(--color-dark-gray);
+    border-radius: 999px;
+}
+#overview main .summary-section p::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+    border-radius: 999px;
+}
+#overview main .summary-section p::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gray);
+    border-radius: 999px;
+}
+/* ====================================| episode */
+#overview main .episode-section {
+    max-height: 46vh;
+    padding: 0 150px;
+    overflow-y: auto;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    justify-self: center;
+    margin: 18px 0 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: opacity 0.3s;
+}
+#overview main .episode-section a {
+    width: 140px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgba(196, 196, 196, 0.25);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 6px;
+}
+#overview main .episode-section::-webkit-scrollbar {
+    width: 8px;
+}
+#overview main .episode-section::-webkit-scrollbar-track {
+    background-color: var(--color-dark-gray);
+    border-radius: 999px;
+}
+#overview main .episode-section::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+    border-radius: 999px;
+}
+#overview main .episode-section::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gray);
+    border-radius: 999px;
+}
+/* ======================================================================| nav */
+#overview nav {
+    height: 50px;
+    display: flex;
+    gap: 36px;
+    position: relative;
+}
+#overview nav button {
+    font-weight: 600;
+    color: var(--color-gray);
+    transition: color 0.7s ease-in-out;
+}
+#overview nav .active {
+    color: var(--color-white);
+}
+#overview nav span {
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-color: var(--color-red);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all 0.7s ease-in-out;
+}
+/* ======================================================================| music */
+#overview .music {
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+    display: grid;
+    gap: 8px;
+}
+#overview .music svg {
+    cursor: pointer;
+}
+#overview .music .speaker-on {
+    display: none;
+}
+#overview .music span {
+    display: block;
+    height: 90px;
+    background-color: rgb(134, 134, 134, 30%);
+    border-top: 8px solid rgb(255, 255, 255, 30%);
+}
+/* ===============================================================================================| responsive */
+@media screen and (max-width: 1200px) {
+    #overview {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #overview {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /* =============================| overview */
+    #overview main .overview-section h1 {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    /* ====================================| episode */
+    #overview main .episode-section {
+        max-height: 60vh;
+        padding: 0 110px;
+    }
+    /* =============================| music */
+    #overview .music {
+        left: 28px;
+    }
+    #overview .music svg {
+        width: 46px;
+    }
+    #overview .music span {
+        height: 70px;
+        border-top: 6px solid rgb(255, 255, 255, 30%);
+    }
+}
+@media screen and (max-width: 930px) {
+    /* =============================| summary */
+    #overview main .summary-section p {
+        padding-left: 120px;
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #overview {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* =============================| overview */
+    #overview main .overview-section h1 {
+        font-size: 50px;
+        margin-bottom: 26px;
+    }
+    #overview main .overview-section p {
+        max-width: 80%;
+    }
+    /* =============================| summary */
+    #overview main .summary-section p {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    #overview main .summary-section p::-webkit-scrollbar {
+        width: 6px;
+    }
+    /* ====================================| episode */
+    #overview main .episode-section {
+        max-height: 66vh;
+        padding: 0;
+    }
+    #overview main .episode-section::-webkit-scrollbar {
+        width: 6px;
+    }
+    /* =============================| music */
+    #overview  .music {
+        left: 18px;
+    }
+    #overview  .music svg {
+        width: 40px;
+    }
+    #overview  .music span {
+        height: 50px;
+        border-top: 4px solid rgb(255, 255, 255, 30%);
+    }
+}
+@media screen and (max-width: 600px) {
+    #overview main .overview-section {
+        margin-bottom: 40px;
+    }
+    /* =============================| summary */
+    #overview main .summary-section h2 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* =============================| overview */
+    #overview main .overview-section h1 {
+        font-size: 34px;
+        margin-bottom: 32px;
+    }
+    #overview main .overview-section p {
+        font-size: 15px;
+        max-width: 75vw;
+        line-height: 26px;
+        -webkit-line-clamp: 5;
+    }
+    #overview main .overview-section > div {
+        gap: 10px;
+    }
+    #overview main .overview-section > div > * {
+        padding: 11px 16px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    /* =============================| summary */
+    #overview main .summary-section p {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-height: 60vh;
+    }
+    #overview main .summary-section p::-webkit-scrollbar {
+        width: 4px;
+    }
+    /* ====================================| episode */
+    #overview main .episode-section::-webkit-scrollbar {
+        width: 4px;
+    }
+    /* =============================| music */
+    #overview .music {
+        bottom: 18px;
+        left: 20px;
+        gap: 0;
+    }
+    #overview .music svg {
+        width: 38px;
+    }
+    #overview .music span {
+        height: 0;
+        border-top: 0px;
+    }
+}

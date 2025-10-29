@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/stories/add-to-favorites
+Disallow: /api/set-token
+Disallow: /admin/
+Disallow: /favorites
+Disallow: /search
+
+Sitemap: https://vahshatkhane.liara.run/sitemap.xml

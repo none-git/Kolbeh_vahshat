@@ -1,0 +1,230 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    list-style: none;
+}
+:root {
+    direction: rtl;
+    font-size: 16px;
+    --color-white: #ffffff;
+    --color-black: #090909;
+    --color-red: #DB0000;
+    --color-gray: #abb0b4;
+    --color-dark-gray: #101010;
+}
+/* =-=-=-=-=-= */
+body {
+    background-color: var(--color-black);
+}
+body *{
+    font-family: dana;
+    font-family: iranSansX;
+    color: var(--color-white);
+}
+a,
+button {
+    cursor: pointer;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}
+/* =-=-=-=-=-=| Selection */
+::selection {
+    background-color: #ff00007d;
+    color: var(--color-white);
+}
+/* =-=-=-=-=-=| Scrollbar */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--color-dark);
+    border-radius: 999px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #5a6264;
+    border-radius: 999px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-white);
+    border-radius: 999px;
+}
+/* =-=-=-=-=-=| Fonts */
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 10;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Hairline.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Hairline.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-UltraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-DemiBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-DemiBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 930;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-ExtraBlack.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-ExtraBlack.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 960;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Heavy.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Heavy.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 990;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-fat.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-fat.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../public/fonts/dana/Webfonts/woff2/Dana-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/dana/Webfonts/woff/Dana-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: danaNumber;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../public/fonts/Farsi-numerals/Webfonts/woff2/DanaFaNum-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../public/fonts/Farsi-numerals/Webfonts/woff/DanaFaNum-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Thin.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Thin.woff2') format('woff2');		
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-UltraLight.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-UltraLight.woff2') format('woff2');	
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Light.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Light.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Medium.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Medium.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-DemiBold.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-DemiBold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Black.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Black.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Bold.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Bold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../public/fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Regular.woff') format('woff'),   
+	url('../public/fonts/IranSansX/Webfonts/fonts/woff2/IRANSansX-Regular.woff2') format('woff2');	
+}
+@font-face {
+    font-family: fetne;
+    src: local("Fetne"), url('../public/fonts/fetne/Fetne.ttf');
+}

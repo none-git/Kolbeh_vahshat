@@ -1,0 +1,304 @@
+#story {
+    padding: 0 60px;
+    min-height: 100dvh;
+}
+#story .background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(7px);
+    z-index: -1;
+}
+/* -------- BLACK -------- */
+#story.dark-theme .background {
+    background: #1e1e1e !important;
+}
+#story.dark-theme main h1 ,
+#story.dark-theme main h2 ,
+#story.dark-theme main h3 ,
+#story.dark-theme main p {
+    color: #e0e0e0;
+    text-shadow: none;
+}
+#story.dark-theme main p {
+    font-weight: 300;
+}
+#story.dark-theme header .nav-icon span {
+    background-color: #e0e0e0;
+}
+#story.dark-theme header svg {
+    stroke: #e0e0e0;
+    fill: #e0e0e0;
+}
+/* -------- WIHTE -------- */
+#story.light-theme .background {
+    background: #fdf6e3 !important;
+}
+#story.light-theme main h1 ,
+#story.light-theme main h2 ,
+#story.light-theme main h3 ,
+#story.light-theme main p {
+    color: #333333;
+    text-shadow: none;
+}
+#story.light-theme main p {
+    font-weight: 700;
+}
+#story.light-theme header .nav-icon span {
+    background-color: #333333;
+}
+#story.light-theme header .nav-more {
+    background-color: #3333337b;
+}
+#story.light-theme header svg {
+    stroke: #333333;
+    fill: #333333;
+}
+#story.light-theme header > div:nth-of-type(1) > a {
+    font-weight: 600;
+}
+#story.light-theme header .selected {
+    color: var(--color-black);
+}
+/* -------- CONTRAST -------- */
+#story.contrast-theme .background {
+    background: var(--color-white)  !important;
+}
+#story.contrast-theme main h1 ,
+#story.contrast-theme main h2 ,
+#story.contrast-theme main h3 ,
+#story.contrast-theme main p {
+    color: var(--color-black);
+    text-shadow: none;
+}
+#story.contrast-theme main p {
+    font-weight: 600;
+}
+#story.contrast-theme header .nav-icon span {
+    background-color: var(--color-black);
+}
+#story.contrast-theme header .nav-more {
+    background-color: var(--color5);
+}
+#story.contrast-theme header svg {
+    stroke: var(--color-black);
+    fill: var(--color-black);
+}
+#story.contrast-theme header > div:nth-of-type(1) > a {
+    font-weight: 600;
+}
+#story.contrast-theme header .selected {
+    color: var(--color-black);
+}
+#story.contrast-theme .music svg {
+    filter: drop-shadow(0 0 2px var(--color5));
+}
+/* ======================================================================| main */
+#story main {
+    padding: 80px 0 30px;
+    justify-self: center;
+    width: 100%;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+#story main h1 {
+    text-align: center;
+    font-size: 76px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px var(--color-black);
+    margin-bottom: 36px;
+}
+#story main h2 {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 0 2px 6px var(--color-black);
+    margin: 36px 0 20px;
+}
+#story main p {
+    color: var(--color4);
+    font-weight: 400;
+    line-height: 34px;
+    text-shadow: 0 0 1rem var(--color-black);
+    padding: 10px 0 20px;
+    text-align: justify;
+    white-space: pre-line;
+    direction: rtl;
+}
+/* ======================================================================| music */
+#story .music {
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+    display: grid;
+    gap: 8px;
+}
+#story .music svg {
+    cursor: pointer;
+    width: 54px;
+    aspect-ratio: 1/1;
+}
+#story .music .speaker-on {
+    display: none;
+}
+#story .music span {
+    display: block;
+    height: 90px;
+    background-color: rgb(134, 134, 134, 30%);
+    border-top: 8px solid rgb(255, 255, 255, 30%);
+}
+/* ======================================================================| theme */
+#story .theme {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: grid;
+    gap: 16px;
+}
+#story .theme div {
+    display: flex;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(196, 196, 196, 0.25);
+}
+#story .theme div span {
+    display: block;
+    width: 50%;
+    height: 100%;
+}
+#story .theme .dark-theme span:nth-of-type(1) {
+    background-color: #1e1e1e;
+}
+#story .theme .dark-theme span:nth-of-type(2) {
+    background-color: #e0e0e0;
+}
+#story .theme .light-theme span:nth-of-type(1) {
+    background-color: #fdf6e3;
+}
+#story .theme .light-theme span:nth-of-type(2) {
+    background-color: #333333;
+}
+#story .theme .contrast-theme span:nth-of-type(1) {
+    background-color: var(--color-white);
+}
+#story .theme .contrast-theme span:nth-of-type(2) {
+    background-color: var(--color-black);
+}
+/* ===============================================================================================| responsive */
+@media screen and (max-width: 1500px) {
+    /* =============================| main */
+    #story main {
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #story{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    /* =============================| main */
+    #story main {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #story{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /* =============================| main */
+    #story main {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    #story main h1 {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #story main h2 {
+        font-size: 36px;
+    }
+    /* =============================| music */
+    #story .music {
+        left: 28px;
+    }
+    #story .music svg {
+        width: 46px;
+    }
+    #story .music span {
+        height: 70px;
+        border-top: 6px solid rgb(255, 255, 255, 30%);
+    }
+}
+@media screen and (max-width: 768px) {
+    #story{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* =============================| main */
+    #story main {
+        padding-left: 46px;
+        padding-right: 40px;
+    }
+    #story main h1 {
+        font-size: 50px;
+    }
+    #story main h2 {
+        font-size: 32px;
+    }
+    /* =============================| music */
+    #story .music {
+        left: 18px;
+    }
+    #story .music svg {
+        width: 40px;
+    }
+    #story .music span {
+        height: 50px;
+        border-top: 4px solid rgb(255, 255, 255, 30%);
+    }
+    /* =============================| theme */
+    #story .theme {
+        bottom: 24px;
+        right: 18px;
+        gap: 16px;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* =============================| main */
+    #story main {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    #story main h1 {
+        font-size: 36px;
+    }
+    #story main h2 {
+        font-size: 26px;
+    }
+    /* =============================| music */
+    #story .music {
+        bottom: 18px;
+        left: 10px;
+        gap: 0;
+    }
+    #story .music svg {
+        width: 34px;
+    }
+    #story .music span {
+        height: 0;
+        border-top: 0px;
+    }
+    /* =============================| theme */
+    #story .theme {
+        bottom: 18px;
+        right: 10px;
+    }
+}
+

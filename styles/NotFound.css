@@ -1,0 +1,146 @@
+#no-page {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+/* ======================================================================| header */
+#no-page header {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+/* ======================================================================| main */
+#no-page main {
+    padding-bottom: 16dvh;
+    margin: auto;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#no-page main div {
+    background-color: var(--color-red);
+    height: 16rem;
+    width: 10rem;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 0;
+    border-bottom-left-radius: 5rem;
+}
+#no-page main h1 {
+    position: relative;
+    z-index: 999;
+    font-size: 200px;
+    font-weight: bold;
+    display: flex;
+    color: var(--color-white);
+}
+#no-page main h1 span:nth-child(1) {
+    display: block;
+    transform: rotate(28deg);
+    color: var(--color-white);
+}
+#no-page main h1 span:nth-child(2) {
+    display: block;
+    color: var(--color-dark-gray);
+}
+#no-page main h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+#no-page main p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-align: center;
+    line-height: 150%;
+    padding: 0 40px;
+}
+#no-page main a {
+    padding: 12px 48px;
+    background-color: var(--color-dark-gray);
+    margin-top: 32px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+#no-page main a span {
+    position: relative;
+    transition: all 0.4s;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 999;
+    color: var(--color-black);
+}
+#no-page main a::before {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    content: "";
+    background: var(--color-gray);
+    transform: skew(30deg);
+    transition: transform .4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+#no-page main a:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+#no-page main a:hover span {
+    color: var(--color-white);
+}
+/* ===============================================================================================| responsive */
+@media screen and (max-width: 1200px) {
+    /* =============================| header */
+    #no-page header {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    /* =============================| header */
+    #no-page header {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* =============================| header */
+    #no-page header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #no-page header .nav-more {
+        left: 20px;
+        right: 20px;
+    } 
+}
+@media screen and (max-width: 480px) {
+    /* =============================| main */
+    #no-page main div {
+        height: 13rem;
+        width: 8rem;
+        border-bottom-left-radius: 4rem;
+    }
+    #no-page main h1 {
+        font-size: 10rem;
+    }
+    #no-page main h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    #no-page main p {
+        font-size: 14px;
+    }
+    #no-page main a {
+        padding: 12px 40px;
+        margin-top: 28px;
+        border-radius: 6px;
+    }
+    #no-page main a span {
+        font-size: 16px;
+    }
+}
+   
